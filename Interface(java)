@@ -1,0 +1,59 @@
+package arrays;
+import java.util.*;
+interface Computer{
+   void code();
+}
+interface Mobile{
+   void display();
+}
+class A implements Computer,Mobile{
+
+   @Override
+   public void display() {
+       // TODO Auto-generated method stub
+       
+   }
+
+   @Override
+   public void code() {
+       // TODO Auto-generated method stub
+       
+   }
+   
+}
+
+//class Desktop implements Computer{
+//    public void code() {
+//        System.out.println("code,run");
+//    }
+//}
+//class Laptop implements Computer
+//{
+//    public void code() {
+//        System.out.println("coding");
+//    }
+//}
+//class Developer{
+//    void devApp(Computer obj1) {
+//        obj1.code();
+//    }
+//}
+
+public class Demo {
+   public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+       Computer obj1=new Desktop();
+       Computer obj2=new Laptop();
+       Developer obj3=new Developer();
+       obj3.devApp(obj2);
+       
+       
+       
+   
+   
+       
+       
+       
+       
+       
+}}
