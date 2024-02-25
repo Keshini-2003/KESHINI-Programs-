@@ -1,0 +1,72 @@
+package arrays;
+import java.util.*;
+class Employees{
+   private int age;
+   private String name;
+   private double salary;
+   public Employees(int age,String name,double salary) {
+       this.age=age;
+       this.name=name;
+       this.salary=salary;
+       
+   }
+   int getAge() {
+       return age;
+   }
+   double getSalary() {
+       return salary;
+   }
+   
+}
+public class Demo {
+   public static void main(String[] args){
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+       Employees[] employee=new Employees[n];
+       for(int i=0;i<n;i++) {
+           int a=sc.nextInt();
+           String name=sc.next();
+           double s=sc.nextDouble();
+           employee[i]=new Employees(a,name,s);
+       }
+       for(Employees j:employee) {
+           System.out.println(j.getAge());
+           System.out.println(j.getSalary());
+       }
+       
+//        Employees []employee= {
+//                new Employees(45,"virat",90000),
+//                new Employees(12,"nivi",50000),
+//                new Employees(35,"shiva",80000),
+//                new Employees(25,"karthik",40000),
+//                new Employees(85,"sneha",70000)
+//        };
+//        int total=0;
+//        int c=0;
+//        for(Employees emp:employee) {
+//            if(emp.getAge()>30) {
+//                total+=emp.getSalary();
+//                c++;
+//            }
+//        }
+//        double average=total/c;
+//        System.out.println(average);
+//        
+//        
+//    
+//        
+       
+       
+       
+       
+       
+       
+       
+   
+   
+       
+       
+       
+       
+       
+}}
