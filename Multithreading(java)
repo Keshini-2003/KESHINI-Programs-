@@ -1,0 +1,39 @@
+package arrays;
+import java.util.*;
+class Counter{
+   int count;
+   public synchronized void increment() {
+       count++;
+   }
+}
+class Task implements Runnable{
+   private int times;
+   private Counter c;
+   public Task(Counter c,int times) {
+       this.times=times;
+       this.c=c;
+   }
+   public void run() {
+       for(int i=0;i<times;i++) {
+           c.increment();
+       }
+   }
+   
+}
+public class Demo {
+public static void main(String[] args) throws InterruptedException {
+Scanner sc=new Scanner(System.in);
+Counter c=new Counter();
+Task obj1=new Task(c,500);
+Task obj2=new Task(c,500);
+
+Thread t1=new Thread(obj1);
+Thread t2=new Thread(obj2);
+t1.start();
+t2.start();
+t1.join();
+t2.join();
+
+System.out.println(c.count);
+}
+}
